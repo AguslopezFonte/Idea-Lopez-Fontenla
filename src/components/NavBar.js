@@ -3,7 +3,7 @@ import './Navbar.css';
 
 function Navbar() {
   return (
-      <header>
+      <header className='navbar'>
           <button>Home</button>
           <p>Nosotros</p>
           <a src="#">Tienda</a>
