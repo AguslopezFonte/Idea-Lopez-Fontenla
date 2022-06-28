@@ -2,9 +2,9 @@
 import './Welcome.css';
 
 
-function Welcome() {
+function Welcome({name}) {
   return (
-      <h2> Bienvenido a nuestra pagina </h2>
+      <h2> Bienvenido a nuestra pagina {name} </h2>
   );
 }
 

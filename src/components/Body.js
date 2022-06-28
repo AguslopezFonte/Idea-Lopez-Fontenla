@@ -1,14 +1,17 @@
 
+import { Children } from 'react';
 import './Body.css';
 import Card from './Card';
 
-function Body() {
+function Body({}) {
   return (
      <section className='cuerpo'>
-         <Card />
-         <Card />
-         <Card />
-         <Card />
+       <h2> Catalogo de Productos</h2>
+       <p> Elegi tus productos de esta lista</p>
+         <Card product='Mesa' price= '$1000' img=''/>
+         <Card product='Silla' price= '$200'/>
+         <Card product='' price= ''/>
+         <Card product='' price= ''/>
      </section>
 
   );
