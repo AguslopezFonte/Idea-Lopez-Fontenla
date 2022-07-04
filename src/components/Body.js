@@ -5,7 +5,7 @@ import Card from './Card'
 
 function Body() {
 
-  const[info, setInfo] = useState ([])
+  const[info, setInfo] = useState ()
 
 
   useEffect(()=>{
@@ -23,7 +23,7 @@ function Body() {
        <p> Elegi tus productos de esta lista</p>
        </div>
        <div className='catalogo'>
-         {info.map(i => <Card product ={i.nombre} price={i.precio} />)}
+         {info && info.map(i => <Card product ={i.nombre} price={i.precio} />)}
          </div>
        
       
