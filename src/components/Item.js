@@ -1,5 +1,5 @@
 
-import './Card.css';
+import './Item.css';
 
 function Card({product, price, img}) {
   return (
@@ -8,9 +8,10 @@ function Card({product, price, img}) {
           <p>{props.price}</p>
           <img src={img} />
       </div>
-  
+
 
   );
+  <button className='Boton1'>Ver detalle del producto</button>
 }
 
-export default Card;
+export default Card; 

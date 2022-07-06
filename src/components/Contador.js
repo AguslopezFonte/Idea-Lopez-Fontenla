@@ -50,5 +50,5 @@ function Contador({stock}) {
       </>
   )
 }
-
-export default Contador }
+}
+export default Contador ;

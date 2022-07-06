@@ -1,9 +1,9 @@
 
-import './Navbar.css';
+import './NavBar.css';
 
-function Navbar() {
+function NavBar() {
   return (
-      <header className='navbar'>
+      <header className='navBar'>
           <button>Home</button>
           <p>Nosotros</p>
           <a src="#">Tienda</a>
@@ -12,4 +12,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;
