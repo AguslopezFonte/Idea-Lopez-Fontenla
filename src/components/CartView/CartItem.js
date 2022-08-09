@@ -7,6 +7,7 @@ function CartItem({ product }) {
   return (
     <div className="card">
       <strong>{product.item.nombre}</strong>
+      <img src={product.item.img}></img>
       <span>Precio: {product.item.precio}</span>
       <span>Cantidad: {product.quantity}</span>
       <button onClick={() => removeFromCart(product.item.id)}>Eliminar</button>

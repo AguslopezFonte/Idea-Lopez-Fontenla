@@ -2,15 +2,24 @@ import React, { useContext, useEffect, useState } from "react"; //Plantilla para
 import { Link } from "react-router-dom";
 import { CartContext } from "../Context/CartContext";
 import CartList from "./CartList";
+import Order from "../Order/Order";
 
 function CartViewContainer() {
-  const { cart, removeFromCart } = useContext(CartContext); // Extraemos del contexto lo que vamos a utulizar en este componente.
+  const { cart, removeFromCart, getTotal, clearCart } = useContext(CartContext); // Extraemos del contexto lo que vamos a utulizar en este componente.
+  const [confirmarCompra, setConfirmarCompra] = useState(false);
   // const [isEmpty]
   console.log(cart);
   return (
     <div>
       {cart.length ? (
-        <CartList />
+        <>
+          <CartList />
+          Total de la compra: <strong>{getTotal()}</strong>
+          <hr></hr>
+          <button onClick={() => setConfirmarCompra(true)}>
+            Terminar mi compra
+          </button>
+        </>
       ) : (
         <div className="emptycart-container">
           {" "}
@@ -19,6 +28,14 @@ function CartViewContainer() {
             <button>Seguir comprando</button>
           </Link>
         </div>
+      )}
+      {confirmarCompra && (
+        <Order
+          order={cart}
+          getTotal={getTotal}
+          clearCart={clearCart}
+          setConfirmarCompra={setConfirmarCompra}
+        />
       )}
     </div>
   );

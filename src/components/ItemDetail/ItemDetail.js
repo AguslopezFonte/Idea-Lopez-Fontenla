@@ -15,8 +15,10 @@ function ItemDetail(props) {
 
   return (
     <div>
-      <h4>{props.product.nombre}</h4>
+      <h2>{props.product.nombre}</h2>
       <p>{props.product.descripcion}</p>
+      <h3>${props.product.precio}</h3>
+      <img src={props.product.img}></img>
       {compraTerminada ? (
         <NavLink to="/cart">
           <button> Ir al carrito </button>

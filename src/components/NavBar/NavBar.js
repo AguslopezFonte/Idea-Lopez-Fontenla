@@ -1,7 +1,11 @@
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
+import { FaCartArrowDown } from "react-icons/fa";
+import { useContext } from "react";
+import { CartContext } from "../Context/CartContext";
 
 function NavBar() {
+  const { getQuantity } = useContext(CartContext);
   return (
     <header className="header">
       <nav className="navbar">
@@ -36,6 +40,11 @@ function NavBar() {
               Pianos
             </NavLink>
           </li>
+          {getQuantity() && (
+            <NavLink to="/cart">
+              <FaCartArrowDown />
+            </NavLink>
+          )}
         </ul>
       </nav>
     </header>
